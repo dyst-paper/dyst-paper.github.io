@@ -35,7 +35,7 @@ function _makeHeader() {
                         <p class="is-size-6 text-center"><sup>1</sup>MPI IS   <sup>2</sup>Google Research   <sup>3</sup>Google DeepMind</p>
                         <!-- Correspondence -->
                         <p class="is-size-7 text-center">
-                        <sup>*</sup>Correspondence to: <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de">maximilian.seitzer@tuebingen.mpg.de</a>, <a href = "mailto: dyst@msajjadi.com">dyst@msajjadi.com</a>
+                        <sup>*</sup>Correspondence: <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de,dyst@msajjadi.com">maximilian.seitzer@tuebingen.mpg.de</a>, <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de,dyst@msajjadi.com">dyst@msajjadi.com</a>
                         </p>
                         <br/>
                         <a target="_blank" rel="noopener noreferrer" href="">
