@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="." />
+    <meta name="keywords" content="DyST" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DyST: Towards Dynamic Neural Scene Representations on Real-World Videos</title>
+
+    <link rel="stylesheet" href="./static/css/main.css" />
+
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/jquery-3.6.1.min.js"></script>
+    <script src="./static/js/handlebars-v4.7.7.js"></script>
+    <script src="./static/js/main.js"></script>
+  </head>
+
+
+  <body>
+    <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered">
+    <div class="column has-text-centered">
+
+    <div id="header"></div>
+
+    <center>
+      <video width="80%"  alt="Teaser Video" autoplay muted loop>
+        <source src="data/teaser.mp4" type="video/mp4" />
+      </video>
+    </center>
+
+    <section class="section" id="abstract">
+      <h2 class="title">Abstract</h2>
+        Visual understanding of the world goes beyond the semantics and flat structure of individual images.
+        In this work, we aim to capture both the 3D structure and dynamics of real-world scenes from monocular real-world videos.
+        Our <b>Dynamic Scene Transformer (DyST)</b> model leverages recent work in neural scene representation to learn a latent decomposition of monocular real-world videos into scene content, per-view scene dynamics, and camera pose.
+        This separation is achieved through a novel co-training scheme on monocular videos and our new synthetic dataset DySO.
+        DyST learns tangible latent representations for dynamic scenes that enable view generation with separate control over the camera and the content of the scene.
+    </section>
+
+    <section class="section" id="abstract">
+      <h2 class="title">Model</h2>
+      <center><img src="data/model_fig.png" width="80%" alt="Model Overview" /><br/></center><br />
+
+      The Dynamic Scene Transformer (DyST) learns a decomposed representation of a dynamic scene into scene content, camera pose and dynamics that allows for controllable video generation.
+      DyST is trained by synthesizing novel views using the camera and dynamics control latents.
+      By estimating these control latents from views with matching camera and dynamics on synthetic data, a separation between camera and dynamics is induced.
+      This separation is then transferred to real world video through a co-training scheme.
+      At test time, DyST allows video generation with separate control over camera and content from a few input frames of a real video.
+    </section>
+
+    <section class="section">
+      <h2 class="title">Examples and Visualizations</h2>
+                <span>
+                    <a target="_blank" rel="noopener noreferrer" href="pages/dyso_pca.html">PCA Analysis and Latent Manipulations (DySO dataset)</a> <br/>
+                    <a target="_blank" rel="noopener noreferrer" href="pages/video_manipulations.html">Video Manipulations</a> <br/>
+                </span>
+    </section>
+
+    <section class="section">
+      <h2 class="title">DySO Dataset</h2>
+        The release of the DySO dataset is in progress.
+    </section>
+
+    <section class="section">
+      <h2 class="title">Code</h2>
+        The release of a code implementation is in progress.
+    </section>
+
+  </section>
+    <section class="section">
+      <h2 class="title">Related Projects</h2>
+            <a target="_blank" rel="noopener noreferrer" href="https://srt-paper.github.io/">Scene Representation Transformer (SRT)</a> <br/>
+            <a target="_blank" rel="noopener noreferrer" href="https://rust-paper.github.io/">Really Unposed SRT (RUST)</a>
+    </section>
+
+
+    <section class="section">
+      <h2 class="title">Reference</h2>
+      <div class="column has-text-left">
+          <pre>
+  @article{seitzer2023dyst,
+    author = {
+      Seitzer, Maximilian
+      and van Steenkiste, Sjoerd
+      and Kipf, Thomas
+      and Greff, Klaus
+      and Sajjadi, Mehdi S. M.
+    },
+    title = {{DyST: Towards Dynamic Neural Scene Representations on Real-World Videos}},
+    journal = {ArXiV},
+    year = {2023},
+  }
+          </pre>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+  </body>
+</html>

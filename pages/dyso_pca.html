@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="." />
+    <meta name="keywords" content="DyST" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DyST: Supplementary material</title>
+
+    <link rel="stylesheet" href="../static/css/main.css" />
+
+    <script defer src="../static/js/fontawesome.all.min.js"></script>
+    <script src="../static/js/jquery-3.6.1.min.js"></script>
+    <script src="../static/js/handlebars-v4.7.7.js"></script>
+    <script src="../static/js/main.js"></script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="pca">PCA</h2>
+
+            <p>
+              Interpolations along the principal components of camera and scene dynamics latent spaces.
+              These are the video equivalents of Fig. 6 (top), but showing all 8 components.
+            </p>
+
+            <br />
+
+            <table class="table center">
+              <tbody>
+                <tr>
+                    <td style="vertical-align: middle;">Camera Control Latent</td>
+                    <td>
+                        <video autoplay loop controls muted>
+                            <source src="../data/dyso_pca/01_dyso_pca_cam.webm" type="video/webm">
+                        </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle;">Dynamics Control Latent</td>
+                    <td>
+                        <video autoplay loop controls muted>
+                            <source src="../data/dyso_pca/01_dyso_pca_dyn.webm" type="video/webm">
+                        </video>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class="title is-3" id="interpolations">Latent Interpolations</h2>
+
+            <p>
+                Interpolations in the latent space between a starting and an ending view, while varying
+                only the camera control latent (column 1), the dynamics control latent (column 2), or both (column 3).
+                The generation is based on a scene representation encoded from 3 input views (last row).
+            </p>
+
+            <br />
+
+            <table class="table center">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align: middle;">Vary camera/dynamics/both</td>
+                        <td>
+                            <video autoplay loop controls muted>
+                                <source src="../data/dyso_pca/01_dyso_interp_cam.webm" type="video/webm">
+                            </video>
+                        </td>
+                        <td>
+                            <video autoplay loop controls muted>
+                                <source src="../data/dyso_pca/01_dyso_interp_dyn.webm" type="video/webm">
+                            </video>
+                        </td>
+                        <td>
+                            <video autoplay loop controls muted>
+                                <source src="../data/dyso_pca/01_dyso_interp_both.webm" type="video/webm">
+                            </video>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">Starting View </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_from.png"/>
+                        </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_from.png"/>
+                        </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_from.png"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">Ending View</td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_to.png"/>
+                        </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_to.png"/>
+                        </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_to.png"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: middle;">Input Views</td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_inp1.png"/>
+                        </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_inp2.png"/>
+                        </td>
+                        <td>
+                            <img src="../data/dyso_pca/01_dyso_interp_inp3.png"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

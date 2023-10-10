@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="." />
+    <meta name="keywords" content="DyST" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DyST: Supplementary material</title>
+
+    <link rel="stylesheet" href="../static/css/main.css" />
+
+    <script defer src="../static/js/fontawesome.all.min.js"></script>
+    <script src="../static/js/jquery-3.6.1.min.js"></script>
+    <script src="../static/js/handlebars-v4.7.7.js"></script>
+    <script src="../static/js/main.js"></script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="motion-freezing">Motion Freezing</h2>
+
+            <p>
+              Freezing camera or dynamics motion from a frame of a video.
+              These are the video equivalents of Fig. 7 (left).
+            </p>
+
+            <br />
+
+            <table class="table center">
+              <tbody id="freezing-tbody">
+                <script id="freezing-row" type="text/x-handlebars-template">
+                  <tr>
+                    <td style="vertical-align: middle;">Frame to freeze</td>
+                    {{#each ex_id}}
+                    <td>
+                      <img src="../data/freezing/01_freeze_frame_ex{{this}}.png"/>
+                    </td>
+                    {{/each}}
+                  </tr>
+                  {{#each type}}
+                      <tr>
+                          <td style="vertical-align: middle;">{{this.human}}</td>
+                          {{#each ../ex_id}}
+                          <td>
+                          <video autoplay loop controls muted>
+                              <source src="../data/freezing/01_freeze_{{../this.short}}_ex{{this}}.webm" type="video/webm">
+                          </video>
+                          </td>
+                          {{/each}}
+                          {{#if @first}}
+                          <td rowspan=2 style="vertical-align: middle;">
+                            Original Video<br />
+                            <video autoplay loop controls muted>
+                                <source src="../data/freezing/01_orig.webm" type="video/webm">
+                            </video>
+                          </td>
+                          {{/if}}
+                      </tr>
+                  {{/each}}
+                </script>
+                <script>
+                  fillTemplate({
+                    templateId: "freezing-row",
+                    dstId: "freezing-tbody",
+                    data: {
+                      type: [
+                        { short: "cam", human: "Freeze Camera" },
+                        { short: "dyn", human: "Freeze Dynamics" },
+                      ],
+                      ex_id: ["1", "2"],
+                    },
+                  });
+                </script>
+              </tbody>
+            </table>
+
+            <h2 class="title is-3" id="motion-transfer">Motion Transfer</h2>
+
+            <p>
+                Transferring the camera motion of a source video to a target video.
+                These are the video equivalents of Fig. 7 (right).
+              </p>
+
+              <br />
+
+              <table class="table center">
+                <tbody id="transfer-tbody">
+                  <script id="transfer-row" type="text/x-handlebars-template">
+                    <tr>
+                      <td></td>
+                      <td style="vertical-align: middle;">Row:<br />Target Videos<br /><br />Column:<br />Source Videos</td>
+                      {{#each ex_id}}
+                      <td>
+                        <video autoplay loop controls muted>
+                            <source src="../data/transfer/{{this}}_orig.webm" type="video/webm">
+                        </video>
+                      </td>
+                      {{/each}}
+                    </tr>
+                    {{#each type}}
+                        <tr>
+                            <td style="vertical-align: middle;">{{this.human}}</td>
+                            <td>
+                                <video autoplay loop controls muted>
+                                    <source src="../data/transfer/{{this.short}}.webm" type="video/webm">
+                                </video>
+                                </td>
+                            {{#each ../ex_id}}
+                            <td>
+                            <video autoplay loop controls muted>
+                                <source src="../data/transfer/{{this}}_transfer_cam_{{../this.short}}.webm" type="video/webm">
+                            </video>
+                            </td>
+                            {{/each}}
+                        </tr>
+                    {{/each}}
+                  </script>
+                  <script>
+                    fillTemplate({
+                      templateId: "transfer-row",
+                      dstId: "transfer-tbody",
+                      data: {
+                        type: [
+                          { short: "zoom", human: "Zoom" },
+                          { short: "pan", human: "Pan" },
+                        ],
+                        ex_id: ["01", "02"],
+                      },
+                    });
+                  </script>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
