@@ -24,10 +24,10 @@ function _makeHeader() {
                     <div class="column has-text-centered">
                         <h1 class="title is-2 publication-title">DyST: Towards Dynamic Neural Scene Representations on Real-World Videos</h1>
                         <p class="is-size-6 text-center">
-                            <a target="_blank" rel="noopener noreferrer" href="https://al.is.mpg.de/person/mseitzer/">Maximilian Seitzer</a><sup>1</sup><sup>*</sup>,
-                            <a target="_blank" rel="noopener noreferrer" href="https://www.sjoerdvansteenkiste.com//">Sjoerd van Steenkiste</a><sup>2</sup>,
-                            <a target="_blank" rel="noopener noreferrer" href="https://tkipf.github.io/">Thomas Kipf</a><sup>3</sup>,
-                            <a target="_blank" rel="noopener noreferrer" href="https://qwlouse.github.io/">Klaus Greff</a><sup>3</sup>,
+                            <a target="_blank" rel="noopener noreferrer" href="https://al.is.mpg.de/person/mseitzer/">Maximilian Seitzer</a><sup>1</sup><sup>*</sup>  
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.sjoerdvansteenkiste.com//">Sjoerd van Steenkiste</a><sup>2</sup>  
+                            <a target="_blank" rel="noopener noreferrer" href="https://tkipf.github.io/">Thomas Kipf</a><sup>3</sup>  
+                            <a target="_blank" rel="noopener noreferrer" href="https://qwlouse.github.io/">Klaus Greff</a><sup>3</sup>  
                             <a target="_blank" rel="noopener noreferrer" href="https://msajjadi.com/">Mehdi S. M. Sajjadi</a><sup>3</sup><sup>*</sup>
                         </p>
 
