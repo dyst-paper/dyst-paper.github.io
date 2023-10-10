@@ -32,7 +32,7 @@ function _makeHeader() {
                         </p>
 
                         <!-- Affiliation -->
-                        <p class="is-size-6 text-center"><sup>1</sup>MPI IS&nbsp;&nbsp;<sup>2</sup>Google Research&nbsp;&nbsp;<sup>3</sup>Google DeepMind</p>
+                        <p class="is-size-6 text-center"><sup>1</sup>MPI for Intelligent Systems &ensp;<sup>2</sup>Google Research &ensp;<sup>3</sup>Google DeepMind</p>
                         <!-- Correspondence -->
                         <p class="is-size-7 text-center">
                         <sup>*</sup>Correspondence: <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de,dyst@msajjadi.com">maximilian.seitzer@tuebingen.mpg.de</a>, <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de,dyst@msajjadi.com">dyst@msajjadi.com</a>
