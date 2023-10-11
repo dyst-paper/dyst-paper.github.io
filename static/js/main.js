@@ -38,7 +38,7 @@ function _makeHeader() {
                         <sup>*</sup>Correspondence: <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de,dyst@msajjadi.com">maximilian.seitzer@tuebingen.mpg.de</a>, <a href = "mailto: maximilian.seitzer@tuebingen.mpg.de,dyst@msajjadi.com">dyst@msajjadi.com</a>
                         </p>
                         <br/>
-                        <a target="_blank" rel="noopener noreferrer" href="">
+                        <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2310.06020">
                           <button class="button is-link is-light is-responsive">Paper</button>
                         </a>
                     </div>
