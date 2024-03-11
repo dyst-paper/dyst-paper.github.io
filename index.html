@@ -60,7 +60,12 @@
 
     <section class="section">
       <h2 class="title">DySO Dataset</h2>
-        The release of the DySO dataset is in progress.
+        The DySO dataset is similar to SRT's MultiShapenet dataset. 
+        Each scene consists of 25 frames, arranged into 5 different object poses from 5 different camera positions. 
+        That is, the frames named "camera_0", "camera_5", "camera_10", ... have the same camera position, but the object has a different pose.
+        The path to the DySO dataset is the following: <code>builder = sunds.builder('kubric:kubric/msn_ms_v4.3a')</code>.
+        Please see <a href="https://srt-paper.github.io/#dataset", target="_blank">SRT Website (Dataset)</a> for detailed 
+ instructions on how to load the dataset.
     </section>
 
   </section>
